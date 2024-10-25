@@ -8,7 +8,6 @@
 .nav-item {
   background-color: rgb(238, 209, 201) !important;
 }
-
 .sidebar-title-bg {
   background-color: blue;
 }
@@ -23,15 +22,6 @@ h5 {
   font-weight: 500;
   line-height: 1.2;
   margin-top: 0;
-}
-.notice:hover {
-  background-color: rgb(248, 248, 248);
-}
-.register:hover {
-  background-color: rgb(248, 248, 248);
-}
-.inquiry:hover {
-  background-color: rgb(248, 248, 248);
 }
 .text-active {
   color: blue;
