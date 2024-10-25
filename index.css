@@ -1,17 +1,21 @@
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
-.sidebar-menu, .nav-item{ 
-    background-color: rgb(238, 209, 201);
+.sidebar-menu,
+.nav-item {
+  background-color: rgb(238, 209, 201);
 }
 
-.sidebar-title-bg{
-    background-color: blue;
+.sidebar-title-bg {
+  background-color: blue;
 }
 
-.sidebar-list-color{
-    color:orangered;
+.sidebar-list-color {
+  color: orangered;
+}
+.nav-border-bottom {
+  border-bottom: 1px solid #dddddd;
 }
