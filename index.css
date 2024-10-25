@@ -4,36 +4,50 @@
   box-sizing: border-box;
 }
 
-.sidebar-menu,
+.offcanvas-md,
 .nav-item {
-  background-color: rgb(238, 209, 201);
+  background-color: rgb(238, 209, 201) !important;
 }
 
 .sidebar-title-bg {
   background-color: blue;
 }
-
 .sidebar-list-color {
   color: orangered;
 }
 .nav-border-bottom {
   border-bottom: 1px solid #dddddd;
 }
-h5{
+h5 {
   font-size: 1.25rem;
   font-weight: 500;
   line-height: 1.2;
   margin-top: 0;
 }
-
-.notice:hover{
+.notice:hover {
   background-color: rgb(248, 248, 248);
 }
-
-.register:hover{
+.register:hover {
   background-color: rgb(248, 248, 248);
 }
-
-.inquiry:hover{
+.inquiry:hover {
   background-color: rgb(248, 248, 248);
+}
+.text-active {
+  color: blue;
+}
+table thead tr th {
+  background-color: rgb(238, 209, 201) !important;
+  color: orangered !important;
+  font-size: 14px;
+}
+input,
+select,
+textarea {
+  box-shadow: none !important;
+  outline: none;
+}
+.box-shadow {
+  border-radius: 0px;
+  box-shadow: 0px 0px 1px 1px #e5e5e5;
 }

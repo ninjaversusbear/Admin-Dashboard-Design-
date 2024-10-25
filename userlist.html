@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="/index.css" />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="sidebar-menu col-2 p-0">
+          <div
+            class="offcanvas-md offcanvas-end position-fixed"
+            style="
+              height: 100%;
+              overflow-y: auto !important;
+              width: inherit !important;
+              scrollbar-width: thin;
+            "
+            tabindex="-1"
+            id="sidebarMenu"
+            aria-labelledby="sidebarMenuLabel"
+          >
+            <div class="offcanvas-header">
+              <h5
+                class="offcanvas-title text-center text-dark"
+                id="sidebarMenuLabel"
+              >
+                e-Ticketing
+              </h5>
+              <button
+                type="button"
+                class="btn-close text-light"
+                data-bs-dismiss="offcanvas"
+                data-bs-target="#sidebarMenu"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body d-md-flex flex-column p-0 pt-lg-3">
+              <ul class="nav flex-column list-group-flush scrollarea">
+                <li class="nav-item">
+                  <a
+                    class="nav-link d-flex align-items-center gap-2 text-dark"
+                    aria-current="page"
+                    href="./index.html"
+                  >
+                    <i class="fa-solid fa-chart-simple sidebar-list-color"></i>
+                    <span class="sidebar-list-color"> Dashboard</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link d-flex align-items-center gap-2 text-dark"
+                    aria-current="page"
+                    href="#"
+                  >
+                    <i
+                      class="fa-solid text-active fa-user sidebar-list-color"
+                    ></i
+                    ><span class="sidebar-list-color text-active">Users</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link d-flex align-items-center gap-2 text-dark"
+                    aria-current="page"
+                    href="./notice.html"
+                  >
+                    <i
+                      class="fa-solid fa-circle-exclamation sidebar-list-color"
+                    ></i
+                    ><span class="sidebar-list-color">Notice</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link d-flex align-items-center gap-2 text-dark"
+                    aria-current="page"
+                    href="#"
+                  >
+                    <i class="fa-solid fa-image sidebar-list-color"></i
+                    ><span class="sidebar-list-color">Gallery</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link d-flex align-items-center gap-2 text-dark"
+                    aria-current="page"
+                    href="./quote.html"
+                  >
+                    <i class="fa-solid sidebar-list-color fa-list"></i
+                    ><span class="sidebar-list-color">Quote</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-10">
+          <div
+            class="position-sticky top-0"
+            style="background: #fff; z-index: 100"
+          >
+            <header>
+              <ul class="nav justify-content-end px-5 py-3">
+                <li class="nav-items">
+                  <button
+                    class="btn btn-light bg-transparent dropdown-toggle border-0"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <i class="fa-regular fa-user"></i>
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-light">
+                    <li>
+                      <a class="dropdown-item" href="#"
+                        >Profile &nbsp;<i class="fa-solid fa-user"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#"
+                        >Log Out &nbsp;<i
+                          class="fa-solid fa-right-from-bracket"
+                        ></i
+                      ></a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </header>
+            <hr class="m-0" />
+          </div>
+          <div class="mt-5 px-5">
+            <div class="px-4">
+              <div class="mb-3 row">
+                <div class="col-6">
+                  <button
+                    class="btn btn-outline-success btn-sm px-4"
+                    style="font-weight: 500; padding: 6px 0px"
+                    data-bs-target="#exampleModalToggle"
+                    data-bs-toggle="modal"
+                  >
+                    Register User
+                  </button>
+                </div>
+                <nav
+                  class="col-6 d-flex justify-content-end"
+                  aria-label="breadcrumb"
+                >
+                  <ol class="breadcrumb d-flex align-items-center">
+                    <li class="breadcrumb-item">
+                      <a
+                        href="#"
+                        class="text-decoration-none text-dark active-custom-color"
+                        style="font-size: 15px"
+                      >
+                        <i
+                          class="fa-solid fa-house sidebar-list-color"
+                          style="font-size: 14px"
+                        ></i>
+                        <span class="sidebar-list-color">Home</span></a
+                      >
+                    </li>
+                    <li
+                      class="breadcrumb-item text-active"
+                      aria-current="page"
+                      style="font-size: 12px"
+                    >
+                      Users
+                    </li>
+                  </ol>
+                </nav>
+              </div>
+              <div class="table-responsive">
+                <table class="table table-striped-columns" id="myTable">
+                  <thead>
+                    <tr>
+                      <th class="py-2 bg-primary text-light">S.N.</th>
+                      <th class="py-2 bg-primary text-light">Name</th>
+                      <th class="py-2 bg-primary text-light">Email</th>
+                      <th class="py-2 bg-primary text-light">Role</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="text-start"><div class="mt-1">1</div></td>
+                      <td>
+                        <div class="mt-1">Benjamin Graham</div>
+                      </td>
+                      <td>test@test.com</td>
+                      <td>Developer</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          class="modal fade"
+          id="exampleModalToggle"
+          aria-hidden="true"
+          aria-labelledby="exampleModalToggleLabel"
+          tabindex="-1"
+        >
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <div><h6>User Registration</h6></div>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <form action="#">
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label"
+                      >Full Name</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="exampleInputEmail1"
+                      aria-describedby="emailHelp"
+                      placeholder="Full Name"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label"
+                      >Email address</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="exampleInputEmail1"
+                      aria-describedby="emailHelp"
+                      placeholder="someone@example.com"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="" class="form-label"> Role </label>
+                    <select
+                      class="form-select"
+                      aria-label="Default select example"
+                      required
+                    >
+                      <option></option>
+                      <option value="1">Admin</option>
+                      <option value="2">Editor</option>
+                      <option value="3">Viewer</option>
+                    </select>
+                  </div>
+                  <div class="d-flex justify-content-center">
+                    <button
+                      type="submit"
+                      class="btn btn-success btn-sm px-4"
+                      style="font-weight: 500; padding: 6px 0px"
+                    >
+                      Register
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
