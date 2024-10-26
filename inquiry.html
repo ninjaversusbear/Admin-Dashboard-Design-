@@ -58,7 +58,9 @@
                     aria-current="page"
                     href="./index.html"
                   >
-                    <i class="fa-solid fa-chart-simple sidebar-list-color"></i>
+                    <i
+                      class="fa-solid sidebar-icon fa-chart-simple sidebar-list-color"
+                    ></i>
                     <span class="sidebar-list-color"> Dashboard</span>
                   </a>
                 </li>
@@ -68,7 +70,9 @@
                     aria-current="page"
                     href="#"
                   >
-                    <i class="fa-solid fa-user sidebar-list-color"></i
+                    <i
+                      class="fa-solid sidebar-icon fa-user sidebar-list-color"
+                    ></i
                     ><span class="sidebar-list-color">Users</span>
                   </a>
                 </li>
@@ -79,7 +83,7 @@
                     href="./notice.html"
                   >
                     <i
-                      class="fa-solid fa-circle-exclamation sidebar-list-color"
+                      class="fa-solid sidebar-icon fa-circle-exclamation sidebar-list-color"
                     ></i
                     ><span class="sidebar-list-color">Notice</span>
                   </a>
@@ -90,7 +94,9 @@
                     aria-current="page"
                     href="#"
                   >
-                    <i class="fa-solid fa-image sidebar-list-color"></i
+                    <i
+                      class="fa-solid sidebar-icon fa-image sidebar-list-color"
+                    ></i
                     ><span class="sidebar-list-color">Gallery</span>
                   </a>
                 </li>
@@ -100,7 +106,9 @@
                     aria-current="page"
                     href="./quote.html"
                   >
-                    <i class="fa-solid sidebar-list-color fa-list"></i
+                    <i
+                      class="fa-solid sidebar-icon sidebar-list-color fa-list"
+                    ></i
                     ><span class="sidebar-list-color">Quote</span>
                   </a>
                 </li>
@@ -110,7 +118,9 @@
                     aria-current="page"
                     href="#"
                   >
-                    <i class="fa-solid text-active fa-list"></i
+                    <i
+                      class="fa-solid sidebar-icon text-active fa-clipboard-question"
+                    ></i
                     ><span class="text-active">Inquiry</span>
                   </a>
                 </li>
@@ -118,10 +128,14 @@
             </div>
           </div>
         </div>
-        <div class="col-md-10">
+        <div class="col-md-10 p-0">
           <div
             class="position-sticky top-0"
-            style="background: #fff; z-index: 100"
+            style="
+              background: #fff;
+              z-index: 100;
+              box-shadow: 4px 0px 2px 1px #d1d1d1;
+            "
           >
             <header>
               <ul class="nav justify-content-end px-5 py-3">
@@ -154,47 +168,19 @@
           </div>
           <div class="mt-5 px-5">
             <div class="px-4">
-              <div class="mb-3 row">
-                <div class="col-6"></div>
-                <nav
-                  class="col-6 d-flex justify-content-end"
-                  aria-label="breadcrumb"
-                >
-                  <ol class="breadcrumb d-flex align-items-center">
-                    <li class="breadcrumb-item">
-                      <a
-                        href="#"
-                        class="text-decoration-none text-dark active-custom-color"
-                        style="font-size: 15px"
-                      >
-                        <i
-                          class="fa-solid fa-house sidebar-list-color"
-                          style="font-size: 14px"
-                        ></i>
-                        <span class="sidebar-list-color">Home</span></a
-                      >
-                    </li>
-                    <li
-                      class="breadcrumb-item text-active"
-                      aria-current="page"
-                      style="font-size: 12px"
-                    >
-                      Inquiry
-                    </li>
-                  </ol>
-                </nav>
-              </div>
               <div class="inquiry">
                 <div class="row mt-4">
                   <div class="col-md-4 mb-4">
-                    <div class="card">
+                    <div class="card card-orange py-3">
                       <div
                         class="card-body d-flex flex-column align-items-center"
                       >
-                        <h5 class="card-title">Admission Inquiries</h5>
+                        <h5 class="card-title sidebar-list-color">
+                          Admission Inquiries
+                        </h5>
                         <a href="#"
                           ><button
-                            class="btn btn btn-outline-primary btn-sm px-3 mt-2"
+                            class="btn btn btn-outline-orangered btn-sm px-3 mt-2"
                           >
                             View Details
                           </button></a
@@ -203,14 +189,14 @@
                     </div>
                   </div>
                   <div class="col-md-4 mb-4">
-                    <div class="card">
+                    <div class="card card-orange py-3">
                       <div
                         class="card-body d-flex flex-column align-items-center"
                       >
-                        <h5 class="card-title">Messages</h5>
+                        <h5 class="card-title sidebar-list-color">Messages</h5>
                         <a href="#"
                           ><button
-                            class="btn btn btn-outline-primary btn-sm px-3 mt-2"
+                            class="btn btn btn-outline-orangered btn-sm px-3 mt-2"
                           >
                             View Details
                           </button></a
@@ -219,14 +205,16 @@
                     </div>
                   </div>
                   <div class="col-md-4 mb-4">
-                    <div class="card">
+                    <div class="card card-orange py-3">
                       <div
                         class="card-body d-flex flex-column align-items-center"
                       >
-                        <h5 class="card-title">Total Subscribers</h5>
+                        <h5 class="card-title sidebar-list-color">
+                          Total Subscribers
+                        </h5>
                         <a href="#"
                           ><button
-                            class="btn btn btn-outline-primary btn-sm px-3 mt-2"
+                            class="btn btn btn-outline-orangered btn-sm px-3 mt-2"
                           >
                             View Details
                           </button></a
@@ -235,14 +223,16 @@
                     </div>
                   </div>
                   <div class="col-md-4 mb-4">
-                    <div class="card">
+                    <div class="card card-orange py-3">
                       <div
                         class="card-body d-flex flex-column align-items-center"
                       >
-                        <h5 class="card-title">Total Job Inquiries</h5>
+                        <h5 class="card-title sidebar-list-color">
+                          Total Job Inquiries
+                        </h5>
                         <a href="#"
                           ><button
-                            class="btn btn btn-outline-primary btn-sm px-3 mt-2"
+                            class="btn btn btn-outline-orangered btn-sm px-3 mt-2"
                           >
                             View Details
                           </button></a
@@ -251,14 +241,16 @@
                     </div>
                   </div>
                   <div class="col-md-4 mb-4">
-                    <div class="card">
+                    <div class="card card-orange py-3">
                       <div
                         class="card-body d-flex flex-column align-items-center"
                       >
-                        <h5 class="card-title">Scholarship Inquiries</h5>
+                        <h5 class="card-title sidebar-list-color">
+                          Scholarship Inquiries
+                        </h5>
                         <a href="#"
                           ><button
-                            class="btn btn-outline-primary btn-sm px-3 mt-2"
+                            class="btn btn-outline-orangered btn-sm px-3 mt-2"
                           >
                             View Details
                           </button></a

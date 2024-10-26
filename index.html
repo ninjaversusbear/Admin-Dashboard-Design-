@@ -17,7 +17,7 @@
       referrerpolicy="no-referrer"
     />
     <title>Admin Dashboard</title>
-    <link rel="stylesheet" href="/index.css" />
+    <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
     <div class="container-fluid">
@@ -51,8 +51,11 @@
               ></button>
             </div>
             <div class="offcanvas-body d-md-flex flex-column p-0 pt-lg-3">
-              <ul class="nav flex-column list-group-flush scrollarea">
-                <li class="nav-item">
+              <ul
+                class="nav flex-column list-group-flush scrollarea"
+                style="margin-top: 12px"
+              >
+                <li class="nav-item border-bottom-blue">
                   <a
                     class="nav-link d-flex align-items-center gap-2 text-dark"
                     aria-current="page"
@@ -62,7 +65,7 @@
                     <span style="color: blue"> Dashboard</span>
                   </a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item border-bottom-orange">
                   <a
                     class="nav-link d-flex align-items-center gap-2 text-dark"
                     aria-current="page"
@@ -72,7 +75,7 @@
                     ><span class="sidebar-list-color">Users</span>
                   </a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item border-bottom-orange">
                   <a
                     class="nav-link d-flex align-items-center gap-2 text-dark"
                     aria-current="page"
@@ -84,7 +87,7 @@
                     ><span class="sidebar-list-color">Notice</span>
                   </a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item border-bottom-orange">
                   <a
                     class="nav-link d-flex align-items-center gap-2 text-dark"
                     aria-current="page"
@@ -94,7 +97,7 @@
                     ><span class="sidebar-list-color">Gallery</span>
                   </a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item border-bottom-orange">
                   <a
                     class="nav-link d-flex align-items-center gap-2 text-dark"
                     aria-current="page"
@@ -118,13 +121,17 @@
             </div>
           </div>
         </div>
-        <div class="col-md">
+        <div class="col-md-10 px-0">
           <div
             class="position-sticky top-0"
-            style="background: #fff; z-index: 100"
+            style="
+              background: #fff;
+              z-index: 100;
+              box-shadow: 4px 0px 2px 1px #d1d1d1;
+            "
           >
             <header>
-              <ul class="nav justify-content-end">
+              <ul class="nav justify-content-end py-3 px-4">
                 <li class="nav-items">
                   <button
                     class="btn btn-light bg-transparent dropdown-toggle border-0"
@@ -150,10 +157,10 @@
                 </li>
               </ul>
             </header>
-            <hr />
+            <hr class="m-0" />
           </div>
           <div class="px-md-5">
-            <h4>Welcome to Dashboard Admin !</h4>
+            <h4 class="mt-5">Welcome to Dashboard Admin !</h4>
             <div class="row mt-2 gy-4">
               <div class="col-3">
                 <div class="card box-shadow">
@@ -189,6 +196,7 @@
               </div>
             </div>
           </div>
+        </div>
       </div>
     </div>
     <script

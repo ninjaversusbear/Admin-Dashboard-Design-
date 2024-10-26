@@ -58,7 +58,9 @@
                     aria-current="page"
                     href="./index.html"
                   >
-                    <i class="fa-solid fa-chart-simple sidebar-list-color"></i>
+                    <i
+                      class="fa-solid sidebar-icon fa-chart-simple sidebar-list-color"
+                    ></i>
                     <span class="sidebar-list-color"> Dashboard</span>
                   </a>
                 </li>
@@ -68,7 +70,9 @@
                     aria-current="page"
                     href="./userlist.html"
                   >
-                    <i class="fa-solid fa-user sidebar-list-color"></i
+                    <i
+                      class="fa-solid sidebar-icon fa-user sidebar-list-color"
+                    ></i
                     ><span class="sidebar-list-color">Users</span>
                   </a>
                 </li>
@@ -79,7 +83,7 @@
                     href="./notice.html"
                   >
                     <i
-                      class="fa-solid fa-circle-exclamation sidebar-list-color"
+                      class="fa-solid fa-circle-exclamation sidebar-icon sidebar-list-color"
                     ></i
                     ><span class="sidebar-list-color">Notice</span>
                   </a>
@@ -90,7 +94,9 @@
                     aria-current="page"
                     href="#"
                   >
-                    <i class="fa-solid fa-image sidebar-list-color"></i
+                    <i
+                      class="fa-solid fa-image sidebar-icon sidebar-list-color"
+                    ></i
                     ><span class="sidebar-list-color">Gallery</span>
                   </a>
                 </li>
@@ -100,7 +106,7 @@
                     aria-current="page"
                     href="#"
                   >
-                    <i class="fa-solid text-active fa-list"></i
+                    <i class="fa-solid text-active sidebar-icon fa-list"></i
                     ><span class="text-active">Quote</span>
                   </a>
                 </li>
@@ -110,7 +116,9 @@
                     aria-current="page"
                     href="./inquiry.html"
                   >
-                    <i class="fa-solid sidebar-list-color fa-list"></i
+                    <i
+                      class="fa-solid fa-clipboard-question sidebar-icon sidebar-list-color"
+                    ></i
                     ><span class="sidebar-list-color">Inquiry</span>
                   </a>
                 </li>
@@ -155,43 +163,17 @@
           <div class="mt-5 px-5">
             <div class="px-4">
               <div class="mb-3 row">
-                <div class="col-6">
+                <div class="col-12">
                   <button
-                    class="btn btn-outline-success btn-sm px-4"
+                    class="btn btn-outline-success btn-sm px-4 d-flex align-items-center gap-2"
                     style="font-weight: 500; padding: 6px 0px"
                     data-bs-target="#exampleModalToggle"
                     data-bs-toggle="modal"
                   >
-                    Add Quote
+                    <i class="fa-solid fa-plus sidebar-icon"></i>
+                    <span> Add Quote </span>
                   </button>
                 </div>
-                <nav
-                  class="col-6 d-flex justify-content-end"
-                  aria-label="breadcrumb"
-                >
-                  <ol class="breadcrumb d-flex align-items-center">
-                    <li class="breadcrumb-item">
-                      <a
-                        href="#"
-                        class="text-decoration-none text-dark active-custom-color"
-                        style="font-size: 15px"
-                      >
-                        <i
-                          class="fa-solid fa-house sidebar-list-color"
-                          style="font-size: 14px"
-                        ></i>
-                        <span class="sidebar-list-color">Home</span></a
-                      >
-                    </li>
-                    <li
-                      class="breadcrumb-item text-active"
-                      aria-current="page"
-                      style="font-size: 12px"
-                    >
-                      Quote
-                    </li>
-                  </ol>
-                </nav>
               </div>
               <div class="table-responsive">
                 <table class="table table-striped-columns" id="myTable">

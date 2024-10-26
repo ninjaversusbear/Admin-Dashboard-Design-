@@ -5,7 +5,8 @@
 }
 
 .offcanvas-md,
-.nav-item {
+.nav-item,
+.card-orange {
   background-color: rgb(238, 209, 201) !important;
 }
 .sidebar-title-bg {
@@ -37,7 +38,42 @@ textarea {
   box-shadow: none !important;
   outline: none;
 }
+
 .box-shadow {
   border-radius: 0px;
   box-shadow: 0px 0px 1px 1px #e5e5e5;
+}
+.border-bottom-blue {
+  border-bottom: 1px solid blue;
+}
+.border-bottom-orange {
+  border-bottom: 1px solid orangered;
+}
+.btn-outline-orangered {
+  outline: 1px solid orangered;
+  color: orangered;
+  border-radius: 2px;
+  font-size: 13px;
+  font-weight: 600;
+}
+.btn-outline-orangered:hover {
+  color: orangered;
+}
+.card-orange {
+  border-radius: 2px;
+}
+.sidebar-icon {
+  font-size: 18px;
+}
+.dt-layout-cell .dt-length,
+.dt-layout-cell .dt-search {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.current {
+  padding: 4px 10px !important;
+}
+.table-responsive {
+  border-radius: 4px;
 }
