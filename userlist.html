@@ -51,7 +51,7 @@
                 class="offcanvas-title text-center text-dark"
                 id="sidebarMenuLabel"
               >
-                e-Ticketing
+                Dashboard
               </h5>
               <button
                 type="button"
@@ -73,16 +73,16 @@
                     <span class="sidebar-list-color"> Dashboard</span>
                   </a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item sidebar-title-bg">
                   <a
                     class="nav-link d-flex align-items-center gap-2 text-dark"
                     aria-current="page"
                     href="#"
                   >
                     <i
-                      class="fa-solid text-active fa-user sidebar-list-color"
+                      class="fa-solid text-light fa-user sidebar-list-color"
                     ></i
-                    ><span class="sidebar-list-color text-active">Users</span>
+                    ><span class="sidebar-list-color text-light">Users</span>
                   </a>
                 </li>
                 <li class="nav-item">
@@ -123,7 +123,9 @@
                     aria-current="page"
                     href="./inquiry.html"
                   >
-                    <i class="fa-solid sidebar-list-color fa-list"></i
+                    <i
+                      class="fa-solid sidebar-list-color fa-clipboard-question"
+                    ></i
                     ><span class="sidebar-list-color">Inquiry</span>
                   </a>
                 </li>
@@ -131,7 +133,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-10 px-0">
+        <div class="col-md-10 px-0" style="background: #f3f3f3; height: 100vh">
           <div
             class="d-flex px-md-5 px-3 bg-light position-sticky top-0 z-3 justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-3 mb-4 border-bottom"
           >
@@ -177,16 +179,19 @@
                   >
                     <div>
                       <h6
-                        class="mb-0 rounded-1 text-active"
+                        class="mb-1 rounded-1 text-active d-flex align-items-center gap-2"
                         style="
                           font-weight: 600;
                           font-size: 16px;
-                          background: rgb(238, 209, 201) !important;
-                          padding: 10px 20px;
                           border-radius: 4px;
                         "
+                        data-bs-target="#exampleModalToggle"
+                        data-bs-toggle="modal"
                       >
-                        <i class="fa-solid fa-circle-plus text-active"></i>
+                        <i
+                          style="background: rgb(238, 209, 201) !important"
+                          class="fa-solid fa-circle-plus p-2 fs-5 rounded-1 text-active"
+                        ></i>
                         Register Users
                       </h6>
                     </div>
@@ -195,17 +200,19 @@
               </div>
             </div>
             <div
-              class="table-responsive px-4 pt-4 mt-3 small category-tbl"
-              style="background: rgb(238, 209, 201) !important"
+              class="table-responsive bg-light p-2 mt-0 small category-tbl"
+              style="border: 1px solid #e3e3e3"
             >
               <table class="table table-striped-columns" id="myTable">
                 <thead>
                   <tr>
-                    <th class="py-2 bg-primary text-light text-start">S.N.</th>
-                    <th class="py-2 bg-primary text-light">Name</th>
-                    <th class="py-2 bg-primary text-light">Email</th>
-                    <th class="py-2 bg-primary text-light">Role</th>
-                    <th class="py-2 bg-primary text-light">Action</th>
+                    <th class="py-2 sidebar-title-bg text-light text-start">
+                      S.N.
+                    </th>
+                    <th class="py-2 sidebar-title-bg text-light">Name</th>
+                    <th class="py-2 sidebar-title-bg text-light">Email</th>
+                    <th class="py-2 sidebar-title-bg text-light">Role</th>
+                    <th class="py-2 sidebar-title-bg text-light">Action</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -238,7 +245,7 @@
                     <td>
                       <div class="mt-1">James Clear</div>
                     </td>
-                    <td>james@tes.com</td>
+                    <td>james@test.com</td>
                     <td>Writer</td>
                     <td>
                       <div class="d-flex align-items-center gap-3">
@@ -287,7 +294,84 @@
           </div>
         </div>
       </div>
-      <div></div>
+      <div>
+        <div
+          class="modal fade user-registration-form-container"
+          id="exampleModalToggle"
+          aria-hidden="true"
+          aria-labelledby="exampleModalToggleLabel"
+          tabindex="-1"
+        >
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-1">
+              <div class="modal-header">
+                <div><h6 class="text-active">User Registration</h6></div>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <form action="#">
+                  <div class="mb-3">
+                    <label
+                      for="exampleInputEmail1"
+                      class="form-label text-active"
+                      >Full Name</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="exampleInputEmail1"
+                      aria-describedby="emailHelp"
+                      placeholder="Full Name"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label
+                      for="exampleInputEmail1"
+                      class="form-label text-active"
+                      >Email address</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="exampleInputEmail1"
+                      aria-describedby="emailHelp"
+                      placeholder="someone@example.com"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="" class="form-label text-active"> Role </label>
+                    <select
+                      class="form-select form-select-sm"
+                      aria-label="Default select example"
+                      required
+                    >
+                      <option>Select Role</option>
+                      <option value="1">Admin</option>
+                      <option value="2">User</option>
+                    </select>
+                  </div>
+                  <div class="d-flex justify-content-center">
+                    <button
+                      type="submit"
+                      class="btn btn-success btn-sm px-4"
+                      style="font-weight: 500; padding: 6px 0px"
+                    >
+                      Register
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="https://cdn.datatables.net/2.1.7/js/dataTables.min.js"></script>
     <script

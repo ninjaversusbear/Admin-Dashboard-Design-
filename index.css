@@ -1,7 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
 }
 
 .offcanvas-md,
@@ -10,7 +12,7 @@
   background-color: rgb(238, 209, 201) !important;
 }
 .sidebar-title-bg {
-  background-color: blue;
+  background-color: blue !important;
 }
 .sidebar-list-color {
   color: orangered;
@@ -72,8 +74,18 @@ textarea {
   align-items: center;
 }
 .current {
-  padding: 4px 10px !important;
+  padding: 6px 15px !important;
+  font-weight: 500 !important;
 }
-.table-responsive {
-  border-radius: 4px;
+.current {
+  border: none !important;
+  background: rgb(238, 209, 201) !important;
+}
+.notice-creation-form-container input,
+.notice-creation-form-container select {
+  border-radius: 2px !important;
+}
+.user-registration-form-container select,
+.notice-creation-form-container select {
+  padding: 7px 10px;
 }

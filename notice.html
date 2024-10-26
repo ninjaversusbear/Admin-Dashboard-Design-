@@ -16,6 +16,17 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.css"
+    />
+    <script src="https://cdn.datatables.net/2.1.8/js/dataTables.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <title>Admin Dashboard</title>
     <link rel="stylesheet" href="/index.css" />
   </head>
@@ -40,7 +51,7 @@
                 class="offcanvas-title text-center text-dark"
                 id="sidebarMenuLabel"
               >
-                e-Ticketing
+                Dashboard
               </h5>
               <button
                 type="button"
@@ -72,14 +83,14 @@
                     ><span class="sidebar-list-color">Users</span>
                   </a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item sidebar-title-bg">
                   <a
                     class="nav-link d-flex align-items-center gap-2 text-dark"
                     aria-current="page"
                     href="#"
                   >
-                    <i class="fa-solid fa-circle-exclamation text-active"></i
-                    ><span class="text-active">Notice</span>
+                    <i class="fa-solid fa-circle-exclamation text-light"></i
+                    ><span class="text-light">Notice</span>
                   </a>
                 </li>
                 <li class="nav-item">
@@ -108,7 +119,9 @@
                     aria-current="page"
                     href="./inquiry.html"
                   >
-                    <i class="fa-solid sidebar-list-color fa-list"></i
+                    <i
+                      class="fa-solid sidebar-list-color fa-clipboard-question"
+                    ></i
                     ><span class="sidebar-list-color">Inquiry</span>
                   </a>
                 </li>
@@ -116,136 +129,183 @@
             </div>
           </div>
         </div>
-        <div class="col-md-10">
+        <div class="col-md-10 px-0" style="background: #f3f3f3; height: 100vh">
           <div
-            class="position-sticky top-0"
-            style="background: #fff; z-index: 100"
+            class="d-flex px-md-5 px-3 bg-light position-sticky top-0 z-3 justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-3 mb-4 border-bottom"
           >
-            <header>
-              <ul class="nav justify-content-end px-5 py-3">
-                <li class="nav-items">
+            <div></div>
+            <div class="dropdown">
+              <button
+                class="border-0 bg-transparent dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="fa-regular fa-user"></i>
+              </button>
+              <ul class="dropdown-menu">
+                <li>
                   <button
-                    class="btn btn-light bg-transparent dropdown-toggle border-0"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
+                    class="dropdown-item d-flex gap-2 align-items-center"
+                    type="button"
                   >
-                    <i class="fa-regular fa-user"></i>
+                    <span>Profile</span>
+                    <i class="fa-solid fa-user" style="color: #1a2035"></i>
                   </button>
-                  <ul class="dropdown-menu dropdown-menu-light">
-                    <li>
-                      <a class="dropdown-item" href="#"
-                        >Profile &nbsp;<i class="fa-solid fa-user"></i
-                      ></a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#"
-                        >Log Out &nbsp;<i
-                          class="fa-solid fa-right-from-bracket"
-                        ></i
-                      ></a>
-                    </li>
-                  </ul>
+                </li>
+                <li>
+                  <button
+                    class="dropdown-item d-flex gap-2 align-items-center"
+                    type="button"
+                  >
+                    <span> Log Out </span
+                    ><i class="fa-solid fa-right-from-bracket text-danger"></i>
+                  </button>
                 </li>
               </ul>
-            </header>
-            <hr class="m-0" />
+            </div>
           </div>
-          <div class="mt-5 px-5">
-            <div class="px-4">
+          <div class="px-md-5 px-3 mb-5">
+            <div class="">
               <div class="mb-3 row">
-                <div class="col-6">
-                  <button
-                    class="btn btn-outline-success btn-sm px-4"
-                    style="font-weight: 500; padding: 6px 0px"
-                    data-bs-target="#exampleModalToggle"
-                    data-bs-toggle="modal"
+                <div class="col-12 col-sm-6">
+                  <a
+                    href="#"
+                    class="text-decoration-none d-flex gap-2 align-items-center"
                   >
-                    Add Notice
-                  </button>
-                </div>
-                <nav
-                  class="col-6 d-flex justify-content-end"
-                  aria-label="breadcrumb"
-                >
-                  <ol class="breadcrumb d-flex align-items-center">
-                    <li class="breadcrumb-item">
-                      <a
-                        href="#"
-                        class="text-decoration-none text-dark active-custom-color"
-                        style="font-size: 15px"
+                    <div>
+                      <h6
+                        class="mb-1 rounded-1 text-active d-flex align-items-center gap-2"
+                        style="
+                          font-weight: 600;
+                          font-size: 16px;
+                          border-radius: 4px;
+                        "
+                        data-bs-target="#exampleModalToggle"
+                        data-bs-toggle="modal"
                       >
                         <i
-                          class="fa-solid fa-house sidebar-list-color"
-                          style="font-size: 14px"
+                          style="background: rgb(238, 209, 201) !important"
+                          class="fa-solid fa-circle-plus p-2 fs-5 rounded-1 text-active"
                         ></i>
-                        <span class="sidebar-list-color">Home</span></a
-                      >
-                    </li>
-                    <li
-                      class="breadcrumb-item text-active"
-                      aria-current="page"
-                      style="font-size: 12px"
-                    >
-                      Notice
-                    </li>
-                  </ol>
-                </nav>
+                        Create Notice
+                      </h6>
+                    </div>
+                  </a>
+                </div>
               </div>
-              <div class="table-responsive">
-                <table class="table table-striped-columns" id="myTable">
-                  <thead>
-                    <tr>
-                      <th class="py-2 bg-primary text-light">S.N.</th>
-                      <th class="py-2 bg-primary text-light">Title</th>
-                      <th class="py-2 bg-primary text-light">
-                        Notice Given By
-                      </th>
-                      <th class="py-2 bg-primary text-light">Action</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="text-start"><div class="mt-1">1</div></td>
-                      <td>
-                        <div class="mt-1">Holiday</div>
-                      </td>
-                      <td>HR</td>
-                      <td>
-                        <div class="d-flex gap-3">
-                          <a href="#"
-                            ><i
-                              class="fa-regular fa-pen-to-square text-secondary"
-                              style="font-size: 18px"
-                            ></i
-                          ></a>
-                          <a href="#">
-                            <i
-                              class="fa-solid fa-trash text-danger"
-                              style="font-size: 18px"
-                            ></i>
-                          </a>
-                        </div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+            </div>
+            <div
+              class="table-responsive bg-light p-2 mt-0 small category-tbl"
+              style="border: 1px solid #e3e3e3"
+            >
+              <table class="table table-striped-columns" id="myTable">
+                <thead>
+                  <tr>
+                    <th class="py-2 sidebar-title-bg text-light text-start">
+                      S.N.
+                    </th>
+                    <th class="py-2 sidebar-title-bg text-light">Title</th>
+                    <th class="py-2 sidebar-title-bg text-light">
+                      To Department
+                    </th>
+                    <th class="py-2 sidebar-title-bg text-light">
+                      Description
+                    </th>
+                    <th class="py-2 sidebar-title-bg text-light">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="text-start"><div class="mt-1">2</div></td>
+                    <td>
+                      <div class="mt-1">Lunch Break Time</div>
+                    </td>
+                    <td>Development</td>
+                    <td>Author</td>
+                    <td>
+                      <div class="d-flex align-items-center gap-3">
+                        <a href="">
+                          <i
+                            style="font-size: 17px"
+                            class="fa-regular fa-pen-to-square text-secondary"
+                          ></i>
+                        </a>
+                        <a href="#">
+                          <i
+                            style="font-size: 17px"
+                            class="fa-solid fa-trash text-danger"
+                          ></i>
+                        </a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text-start"><div class="mt-1">3</div></td>
+                    <td>
+                      <div class="mt-1">Holiday</div>
+                    </td>
+                    <td>Finance</td>
+                    <td>Writer</td>
+                    <td>
+                      <div class="d-flex align-items-center gap-3">
+                        <a href="">
+                          <i
+                            style="font-size: 17px"
+                            class="fa-regular fa-pen-to-square text-secondary"
+                          ></i>
+                        </a>
+                        <a href="#">
+                          <i
+                            style="font-size: 17px"
+                            class="fa-solid fa-trash text-danger"
+                          ></i>
+                        </a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text-start"><div class="mt-1">1</div></td>
+                    <td>
+                      <div class="mt-1">Dashain Holiday</div>
+                    </td>
+                    <td>Finance</td>
+                    <td>Developer</td>
+                    <td>
+                      <div class="d-flex align-items-center gap-3">
+                        <a href="">
+                          <i
+                            style="font-size: 17px"
+                            class="fa-regular fa-pen-to-square text-secondary"
+                          ></i>
+                        </a>
+                        <a href="#">
+                          <i
+                            style="font-size: 17px"
+                            class="fa-solid fa-trash text-danger"
+                          ></i>
+                        </a>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
       </div>
       <div>
         <div
-          class="modal fade"
+          class="modal fade notice-creation-form-container"
           id="exampleModalToggle"
           aria-hidden="true"
           aria-labelledby="exampleModalToggleLabel"
           tabindex="-1"
         >
           <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
+            <div class="modal-content rounded-1">
               <div class="modal-header">
-                <div><h6>Create Notice</h6></div>
+                <div><h6 class="text-active">Create Notice</h6></div>
                 <button
                   type="button"
                   class="btn-close"
@@ -256,37 +316,33 @@
               <div class="modal-body">
                 <form action="#">
                   <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label"
-                      >Title</label
-                    >
+                    <label class="form-label text-active">Title</label>
                     <input
-                      type="email"
+                      type="text"
                       class="form-control"
-                      id="exampleInputEmail1"
-                      aria-describedby="emailHelp"
                       placeholder="Notice Title"
                       required
                     />
                   </div>
                   <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label"
-                      >To Department</label
-                    >
+                    <label class="form-label text-active">To Department</label>
                     <input
                       type="text"
                       class="form-control"
-                      id="exampleInputEmail1"
-                      aria-describedby="emailHelp"
                       placeholder="Department Name"
                       required
                     />
                   </div>
                   <div class="mb-3">
-                    <label for="" class="form-label d-block">File</label>
+                    <label for="" class="form-label d-block text-active"
+                      >File</label
+                    >
                     <input type="file" />
                   </div>
                   <div class="mb-3">
-                    <label for="" class="form-label d-block">Description</label>
+                    <label for="" class="form-label d-block text-active"
+                      >Description</label
+                    >
                     <textarea name="" id="" class="w-100 p-2"></textarea>
                   </div>
                   <div class="d-flex justify-content-center">
@@ -305,7 +361,7 @@
         </div>
       </div>
     </div>
-
+    <script src="https://cdn.datatables.net/2.1.7/js/dataTables.min.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
@@ -313,3 +369,8 @@
     ></script>
   </body>
 </html>
+<script>
+  $(document).ready(function () {
+    $("#myTable").DataTable();
+  });
+</script>
