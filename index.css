@@ -11,8 +11,13 @@
 .card-orange {
   background-color: rgb(238, 209, 201) !important;
 }
+.card-orange:hover {
+  transform: scale(1.03);
+  transition: transform 0.3s ease;
+}
 .card-orange {
-  box-shadow: 0px 0px 0px 0px #c1c1c1;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
 }
 .sidebar-title-bg {
   background-color: blue !important;
@@ -64,9 +69,6 @@ textarea {
 .btn-outline-orangered:hover {
   color: orangered;
 }
-.card-orange {
-  border-radius: 2px;
-}
 .sidebar-icon {
   font-size: 18px;
 }
@@ -91,4 +93,32 @@ textarea {
 .user-registration-form-container select,
 .notice-creation-form-container select {
   padding: 7px 10px;
+}
+.card-orange h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: blue;
+}
+.card-orange h5 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: blue;
+}
+.card-orange button {
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  border: 2px solid blue;
+  border-radius: 6px;
+  color: blue;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: transparent;
+}
+.card-orange button:hover {
+  background-color: blue;
+  color: white;
+}
+.inquiry-icon {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+  color: blue;
 }

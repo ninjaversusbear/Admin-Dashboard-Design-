@@ -1,9 +1,316 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dashboard</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/2.1.7/css/dataTables.dataTables.css"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
   </head>
-  <body></body>
+  <body>
+    <div
+      class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle"
+    >
+      <button
+        class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
+        id="bd-theme"
+        type="button"
+        aria-expanded="false"
+        data-bs-toggle="dropdown"
+        aria-label="Toggle theme (light)"
+      >
+        <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+      </button>
+      <ul
+        class="dropdown-menu dropdown-menu-end shadow"
+        aria-labelledby="bd-theme-text"
+      >
+        <li>
+          <button
+            type="button"
+            class="dropdown-item d-flex align-items-center active"
+            data-bs-theme-value="light"
+            aria-pressed="true"
+          ></button>
+        </li>
+        <li>
+          <button
+            type="button"
+            class="dropdown-item d-flex align-items-center"
+            data-bs-theme-value="dark"
+            aria-pressed="false"
+          ></button>
+        </li>
+        <li>
+          <button
+            type="button"
+            class="dropdown-item d-flex align-items-center"
+            data-bs-theme-value="auto"
+            aria-pressed="false"
+          >
+            Auto
+          </button>
+        </li>
+      </ul>
+    </div>
+    <header
+      class="navbar sticky-top d-flex d-md-none bg-light flex-md-nowrap px-2 shadow z-100"
+      data-bs-theme="dark"
+    >
+      <a
+        class="navbar-brand col-md-3 py-3 col-lg-2 me-0 px-3 fs-6 text-white"
+        href="#"
+        >Admin Dashboard
+      </a>
+
+      <ul class="navbar-nav flex-row d-md-none">
+        <li class="nav-item text-nowrap">
+          <button
+            class="nav-link px-3 text-white"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#sidebarMenu"
+            aria-controls="sidebarMenu"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fa-solid fa-list"></i>
+          </button>
+        </li>
+      </ul>
+
+      <div id="navbarSearch" class="navbar-search w-100 collapse">
+        <input
+          class="form-control w-100 rounded-0 border-0"
+          type="text"
+          placeholder="Search"
+          aria-label="Search"
+        />
+      </div>
+    </header>
+
+    <div class="container-fluid px-0">
+      <div class="row gx-0">
+        <div
+          class="sidebar col-md-3 col-lg-2 p-0 bg-custom-dark text-light sidebar-h-100-vh"
+        >
+          <div
+            class="offcanvas-md offcanvas-end bg-custom-dark position-fixed"
+            style="
+              height: 100%;
+              overflow-y: auto !important;
+              width: inherit !important;
+              scrollbar-width: thin;
+            "
+            tabindex="-1"
+            id="sidebarMenu"
+            aria-labelledby="sidebarMenuLabel"
+          >
+            <div class="offcanvas-header">
+              <h5
+                class="offcanvas-title text-center text-active"
+                id="sidebarMenuLabel"
+              >
+                Admin Dashboard
+              </h5>
+              <button
+                type="button"
+                class="btn-close text-light"
+                data-bs-dismiss="offcanvas"
+                data-bs-target="#sidebarMenu"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div
+              class="offcanvas-body d-md-flex flex-column p-0 pt-lg-3 overflow-y-auto"
+            >
+              <ul class="nav flex-column">
+                <li class="nav-item">
+                  <a
+                    class="nav-link d-flex align-items-center gap-2 text-dark"
+                    aria-current="page"
+                    href="./index.html"
+                  >
+                    <i class="fa-solid fa-chart-simple sidebar-list-color"></i>
+                    <span class="sidebar-list-color"> Dashboard</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link d-flex align-items-center gap-2 text-dark"
+                    aria-current="page"
+                    href="./userlist.html"
+                  >
+                    <i class="fa-solid fa-user sidebar-list-color"></i
+                    ><span class="sidebar-list-color">Users</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link d-flex align-items-center gap-2 text-dark"
+                    aria-current="page"
+                    href="./notice.html"
+                  >
+                    <i
+                      class="fa-solid fa-circle-exclamation sidebar-list-color"
+                    ></i
+                    ><span class="sidebar-list-color">Notice</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link d-flex align-items-center gap-2 text-dark"
+                    aria-current="page"
+                    href="#"
+                  >
+                    <i class="fa-solid fa-image sidebar-list-color"></i
+                    ><span class="sidebar-list-color">Gallery</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link d-flex align-items-center gap-2 text-dark"
+                    aria-current="page"
+                    href="./quote.html"
+                  >
+                    <i class="fa-solid sidebar-list-color fa-list"></i
+                    ><span class="sidebar-list-color">Quote</span>
+                  </a>
+                </li>
+                <li class="nav-item sidebar-title-bg">
+                  <a
+                    class="nav-link d-flex align-items-center gap-2 text-dark"
+                    aria-current="page"
+                    href="./inquiry.html"
+                  >
+                    <i class="fa-solid text-light fa-clipboard-question"></i
+                    ><span class="text-light">Inquiry</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <main
+          class="col-md-9 ms-sm-auto col-lg-10 waste-device-report-container"
+          style="background: #f3f3f3; height: 100vh"
+        >
+          <div
+            class="d-flex bg-light px-md-5 justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-3 mb-4 border-bottom px-3"
+          >
+            <div></div>
+            <div class="dropdown">
+              <button
+                class="border-0 bg-transparent dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="fa-regular fa-user"></i>
+              </button>
+              <ul class="dropdown-menu">
+                <li>
+                  <button
+                    class="dropdown-item d-flex gap-2 align-items-center"
+                    type="button"
+                  >
+                    <span>Profile</span>
+                    <i
+                      class="fa-solid fa-user text-primary"
+                      style="color: #1a2035"
+                    ></i>
+                  </button>
+                </li>
+                <li>
+                  <button
+                    class="dropdown-item d-flex gap-2 align-items-center"
+                    type="button"
+                  >
+                    <span> Forgot Password? </span
+                    ><i class="fa-solid fa-key text-secondary"></i>
+                  </button>
+                </li>
+                <li>
+                  <button
+                    class="dropdown-item d-flex gap-2 align-items-center"
+                    type="button"
+                  >
+                    <span> Log Out </span
+                    ><i class="fa-solid fa-right-from-bracket text-danger"></i>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="px-md-5 px-3">
+            <div
+              class="bg-light p-4 mt-3 small"
+              style="border: 1px solid #e3e3e3"
+            >
+              <h4 class="fw-semibold text-active">Admission Inquiries</h4>
+              <div>
+                <ul class="list-group list-group-flush">
+                  <li
+                    class="list-group-item bg-transparent sidebar-list-color lh-lg"
+                  >
+                    <i class="fa-solid fa-circle" style="font-size: 10px"></i>
+                    &nbsp; How Much Is The Admission Fee?
+                  </li>
+                  <li
+                    class="list-group-item bg-transparent sidebar-list-color lh-lg"
+                  >
+                    <i class="fa-solid fa-circle" style="font-size: 10px"></i>
+                    &nbsp; What Is The Process Of Admission ?
+                  </li>
+                  <li
+                    class="list-group-item bg-transparent sidebar-list-color lh-lg"
+                  >
+                    <i class="fa-solid fa-circle" style="font-size: 10px"></i>
+                    &nbsp; What Is The Admission Deadline?
+                  </li>
+                  <li
+                    class="list-group-item bg-transparent sidebar-list-color lh-lg"
+                  >
+                    <i class="fa-solid fa-circle" style="font-size: 10px"></i>
+                    &nbsp; Is It Worth Getting Admissioning Here?
+                  </li>
+                  <li
+                    class="list-group-item bg-transparent sidebar-list-color lh-lg"
+                  >
+                    <i class="fa-solid fa-circle" style="font-size: 10px"></i>
+                    &nbsp; What Are The Perks Of Getting Admission Here?
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/8508bb06d2.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
