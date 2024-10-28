@@ -140,6 +140,14 @@
               class="offcanvas-body d-md-flex flex-column p-0 pt-lg-3 overflow-y-auto"
             >
               <ul class="nav flex-column">
+                <li class="nav-item text-center mb-2">
+                  <img
+                    src="./sign-in-logo.png"
+                    alt=""
+                    class="mb-3"
+                    style="height: 30px"
+                  />
+                </li>
                 <li class="nav-item sidebar-title-bg">
                   <a
                     class="nav-link d-flex align-items-center gap-2 text-dark"
@@ -211,7 +219,7 @@
 
         <main
           class="col-md-9 ms-sm-auto col-lg-10 waste-device-report-container"
-          style="background: #f3f3f3; height: 100vh"
+          style="background: #f3f3f3; height: 100%"
         >
           <div
             class="d-flex z-0 bg-light px-md-5 justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-3 mb-4 border-bottom px-3"
@@ -261,20 +269,220 @@
             </div>
           </div>
           <div class="px-md-5 px-3">
-            <h2>Welcome To Dashboard Admin !</h2>
-            <div>
-              <canvas
-                class="my-4 w-100"
-                id="myChart"
-                width="1522"
-                height="642"
-                style="
-                  display: block;
-                  box-sizing: border-box;
-                  height: 514px;
-                  width: 1218px;
-                "
-              ></canvas>
+            <h5 class="mb-0">Welcome To Dashboard, Admin !</h5>
+            <p class="text-secondary" style="font-size: 15px">
+              Here's what's happening with your store today.
+            </p>
+            <div class="row mt-4 gy-2">
+              <div class="col-lg-3 col-md-6">
+                <div class="card rounded-1">
+                  <div class="card-body">
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <h6 style="font-size: 13px; color: rgb(135, 138, 153)">
+                        TOTAL USERS
+                      </h6>
+                      <p
+                        class="mb-0 d-flex align-items-center gap-2 text-success"
+                      >
+                        <i class="fa-solid fa-arrow-up"></i><span>+5%</span>
+                      </p>
+                    </div>
+                    <div>
+                      <h2
+                        class="pt-3"
+                        style="font-size: 22px; font-weight: 600"
+                      >
+                        1200
+                      </h2>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-end">
+                      <a
+                        href="./userlist.html"
+                        class="text-dark"
+                        style="font-size: 13px"
+                        >View Total Users</a
+                      >
+                      <div>
+                        <i
+                          class="fa-solid fa-user p-3 rounded-1 bg-danger light-red"
+                          style="color: red"
+                        ></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                <div class="card rounded-1">
+                  <div class="card-body">
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <h6 style="font-size: 13px; color: rgb(135, 138, 153)">
+                        TOTAL NOTICE
+                      </h6>
+                      <p
+                        class="mb-0 d-flex align-items-center gap-2 text-success"
+                      >
+                        <i class="fa-solid fa-arrow-up"></i><span>+5%</span>
+                      </p>
+                    </div>
+                    <div>
+                      <h2
+                        class="pt-3"
+                        style="font-size: 22px; font-weight: 600"
+                      >
+                        900
+                      </h2>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-end">
+                      <a
+                        href="./notice.html"
+                        class="text-dark"
+                        style="font-size: 13px"
+                        >View Total Notice</a
+                      >
+                      <i
+                        class="fa-solid fa-circle-exclamation p-3 rounded-1 text-primary"
+                        style="background: #d9d9ff"
+                      ></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                <div class="card rounded-1">
+                  <div class="card-body">
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <h6 style="font-size: 13px; color: rgb(135, 138, 153)">
+                        TOTAL QUOTE
+                      </h6>
+                      <p
+                        class="mb-0 d-flex align-items-center gap-2 text-success"
+                      >
+                        <i class="fa-solid fa-arrow-up"></i><span>+5%</span>
+                      </p>
+                    </div>
+                    <div>
+                      <h2
+                        class="pt-3"
+                        style="font-size: 22px; font-weight: 600"
+                      >
+                        1800
+                      </h2>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-end">
+                      <a
+                        href="./quote.html"
+                        class="text-dark"
+                        style="font-size: 13px"
+                        >View Total Quote</a
+                      >
+                      <i
+                        class="fa-solid p-3 rounded-1 fa-quote-left bg-success bg-opacity-25 text-success"
+                      ></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                <div class="card rounded-1">
+                  <div class="card-body">
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <h6 style="font-size: 13px; color: rgb(135, 138, 153)">
+                        TOTAL INQUIRY
+                      </h6>
+                      <p
+                        class="mb-0 d-flex align-items-center gap-2 text-success"
+                      >
+                        <i class="fa-solid fa-arrow-up"></i><span>+5%</span>
+                      </p>
+                    </div>
+                    <div>
+                      <h2
+                        class="py-2"
+                        style="font-size: 22px; font-weight: 600"
+                      >
+                        200
+                      </h2>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-end">
+                      <a
+                        href="./inquiry.html"
+                        class="text-dark"
+                        style="font-size: 13px"
+                        >View Total Inquiry</a
+                      >
+                      <i
+                        class="fa-solid p-3 rounded-1 fa-clipboard-question bg-secondary bg-opacity-25 text-secondary"
+                      ></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card rounded-1 mt-4">
+              <div class="card-body">
+                <div class="card-title">
+                  <h6 class="fw-semibold">Recent Users</h6>
+                </div>
+                <div class="card-body p-0">
+                  <div class="table-responsive">
+                    <table class="table small table-striped">
+                      <thead>
+                        <tr>
+                          <th class="sidebar-title-bg text-light">S.N</th>
+                          <th class="sidebar-title-bg text-light">Name</th>
+                          <th class="sidebar-title-bg text-light">User Type</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <td>Adrian Pradhan</td>
+                          <td>User</td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                          <td>Samir Chapagain</td>
+                          <td>User</td>
+                        </tr>
+                        <tr>
+                          <td>3</td>
+                          <td>Manish Shrestha</td>
+                          <td>User</td>
+                        </tr>
+                        <tr>
+                          <td>4</td>
+                          <td>Luis Vuiton</td>
+                          <td>User</td>
+                        </tr>
+                        <tr>
+                          <td>5</td>
+                          <td>Benjamin Graham</td>
+                          <td>User</td>
+                        </tr>
+                        <tr>
+                          <td>6</td>
+                          <td>Robert Rockofeller</td>
+                          <td>User</td>
+                        </tr>
+                        <tr>
+                          <td>7</td>
+                          <td>Tony Kroos</td>
+                          <td>User</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </main>

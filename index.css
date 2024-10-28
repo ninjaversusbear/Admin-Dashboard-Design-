@@ -7,7 +7,7 @@
 }
 .offcanvas-md,
 .nav-item,
-.card-orange {
+.light-red {
   background-color: rgb(238, 209, 201) !important;
 }
 .card-orange:hover {
@@ -94,19 +94,18 @@ textarea {
   padding: 7px 10px;
 }
 .card-orange h2 {
-  font-size: 2rem;
-  font-weight: bold;
-  color: blue;
+  font-size: 18px;
+  font-weight: 600;
 }
 .card-orange h5 {
-  font-size: 1.1rem;
+  font-size: 14px;
   font-weight: 600;
   color: blue;
 }
 .card-orange button {
-  padding: 8px 16px;
+  padding: 5px 16px;
   font-size: 0.9rem;
-  border: 2px solid blue;
+  border: 1px solid blue;
   border-radius: 6px;
   color: blue;
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -117,7 +116,7 @@ textarea {
   color: white;
 }
 .inquiry-icon {
-  font-size: 1.5rem;
+  font-size: 40px;
   margin-bottom: 8px;
   color: blue;
 }
